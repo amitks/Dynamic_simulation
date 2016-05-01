@@ -1,0 +1,25 @@
+Constants
+  g = 9.81 ! m/s^2, gravitational constant
+  m = 80   ! kg, mass of skydiver and pack
+  
+Parameters
+  c = 0.2 ! N-s^2/m^2, drag coefficient
+  
+Variables
+  x = 0    ! meters, initial horizontal position 
+  y = 5000 ! meters, initial vertical position / elevation
+  vx = 50  ! m/s, initial skydiver horizontal velocity = airplane velocity
+  vy = 0   ! m/s, initial skydiver vertical velocity
+  v        ! m/s, magnitude of velocity (combination of vx and vy)
+  
+Intermediates
+  Fx = -c * vx^2
+  Fy = -m*g + c*vy^2
+  
+Equations
+  $x = vx
+  $y = vy
+  m * $vx = Fx
+  m * $vy = Fy
+  v^2 = vx^2 + vy^2  
+  
